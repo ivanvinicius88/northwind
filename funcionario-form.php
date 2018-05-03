@@ -1,19 +1,22 @@
 <?php
 include_once("cabecalho.php");
 include_once("conexao.php");
+include_once("library-operation.php");
 
+$conexao = new BancoDeDados("localhost","root","","northwind");
+$OperationDto = new OperationDto($conexao);
 ?>
 
 
 <div class="container">
   <h1 class="my-4 ">Cadastrar Funcionários</h1>
 
-  <form method="post" action="funcionario-cadastra.php">
+  <form method="POST" action="funcionario-cadastra.php">
 
     <div class="form-row">
       <div class="form-group my-4 mx-3 col-md-1">
         <label for="idfuncionario">ID</label>
-        <input name="idfuncionario" type="text" class="form-control" id="idfuncionario" placeholder="ID" maxlength="4" >
+        <input name="id" type="text" class="form-control" id="idfuncionario" placeholder="ID" maxlength="4" >
       </div>
       
       <div class="form-group my-4 mx-3 col-md-4">
@@ -40,14 +43,14 @@ include_once("conexao.php");
       
       <div class="form-group mx-3 my-4 col-md-3">
 		  <label for="datanascimento">Nascimento</label>
-		  <input name="datanascimento" type="date" class="form-control" id="datanascimento" >
+		  <input name="nascimento" type="date" class="form-control" id="datanascimento" >
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group mx-3  my-4 col-md-3">
 		  <label for="dataadmissao">Data de Admissão</label>
-		  <input name="dataadmissao" type="date" class="form-control" id="dataadmissao" >
+		  <input name="admissao" type="date" class="form-control" id="dataadmissao" >
       </div>
       
       <div class="form-group mx-3 my-4 col-md-3">
@@ -60,23 +63,26 @@ include_once("conexao.php");
 		  <input name="cidade" type="text" class="form-control" id="cidade" placeholder="Cidade" >
       </div>
     </div>
-
+   
     <div class="form-row">
-		<div class="form-group mx-3 my-4 col-md-3">
-		  <label for="inputState">Região</label>
-		  <select name="regiao" id="inputState" class="form-control">
-			<?php
-			   $sql = "SELECT * from regiao";
-				$query = mysqli_query($conexao, $sql);
-			  while($linha = mysqli_fetch_array($query)){
-			  ?>
-			<option><?=$linha["DescricaoRegiao"]?></option>
-			<?php
-			  }
-			  ?>
-		  </select>
-		</div>
+	  <div class="form-group mx-3 my-4 col-md-3">
+		 <label for="regiao">Regiao</label>
+		 <select name="regiao" id="regiao" class="form-control">
 
+			<?php
+			   	$regioes = $OperationDto->listaReg();
+				foreach ($regioes as $regiao) :
+			  ?>
+
+			<option value="<?=$regiao["IDRegiao"]?>"><?=$regiao["DescricaoRegiao"]?></option>
+
+			<?php
+			  endforeach
+			  ?>
+
+		 </select>
+   	  </div>
+     
       <div class="form-group mx-3 my-4 col-md-3">
 		  <label for="cep">CEP</label>
 		  <input name="cep" type="text" class="form-control" id="cep" placeholder="Ex: 190000000">

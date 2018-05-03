@@ -18,14 +18,19 @@
 //----------------------------------------------------------
 
 	   //---------------Cadastrar Funcionários
-			public function cadFun($idfuncionario, $sobrenome, $nome, $titulo, $titulocortesia, $datanascimento, $dataadmissao, $endereco, $cidade, $regiao, $cep, $pais, $telefone, $extensao,$notas){
+		public function cadFun($id, $sobrenome, $nome, $titulo, $titulocortesia, $nascimento, $admissao, $endereco, $cidade, $regiao, $cep, $pais, $telefone, $extensao,$notas){
 
-			$sql = "
-			INSERT INTO funcionarios(IDFuncionario,Sobrenome,Nome,Titulo,TituloCortesia,DataNac,DataAdmissao,Endereco,Cidade,Regiao,Cep,Pais,TelefoneResidencial,Extensao,Notas) 
-			VALUES ('$idfuncionario','$sobrenome','$nome','$titulo','$titulocortesia','$datanascimento','$dataadmissao','$endereco','$cidade','$regiao','$cep','$pais','$telefone','$extensao','$notas')";
-				
+			$sql = "INSERT INTO funcionarios(IDFuncionario,Sobrenome,Nome,Titulo,TituloCortesia,DataNac,DataAdmissao,Endereco,Cidade,Regiao,Cep,Pais,TelefoneResidencial,Extensao,Notas) VALUES ('$id','$sobrenome','$nome','$titulo','$titulocortesia','$nascimento','$admissao','$endereco','$cidade','$regiao','$cep','$pais','$telefone','$extensao','$notas')";
 			return mysqli_query($this->database->getConexao(),$sql);
 		}
+	   
+	   //---------------Buscar Funcionários
+	   public function lookingFun($id){
+		   $sql = "SELECT * FROM funcionarios WHERE IDFuncionario = '{$id}'";
+		   $resultado = mysqli_query($this->database->getConexao(),$sql);
+		   return mysqli_fetch_assoc($resultado);
+	   }
+	   
 	   
 	   	//---------------Atualizar Funcionários
 			function UpdtFun($id, $sobrenome, $nome, $titulo){
