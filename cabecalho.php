@@ -12,32 +12,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/ivanstyle.css">
-   
-     <script>    
+
+     <script>
         $(function () {
             $('[data-toggle="popover"]').popover()
         })
 	  </script>
-    
+
     <title>northWind</title>
   </head>
-  
+
   <body>
-   
-   
+
+
   <!--Navbar on top  -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark  ">
-		
-			
+
+
 			<a href="index.php" class="navbar-brand bg-danger mb-0"><h4>&nbsp;North Wind&nbsp;</h4></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 		<div class="collapse navbar-collapse" id="navbarsite">
 					<ul class="navbar-nav mr-auto">
-					
+
 					<!--Menu Items-->
-				    
+
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Categorias</a>
 							<div class="dropdown-menu">
@@ -58,7 +58,7 @@
 								<a class="dropdown-item" href="">Cadastrar</a>
 								<a class="dropdown-item" href="fornecedores-lista.php">Listar</a>
 							</div>
-                       </li>   
+                       </li>
                      	<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Funcionários</a>
 							<div class="dropdown-menu">
@@ -73,7 +73,7 @@
 								<a class="dropdown-item" href="ordens-lista.php">Listar</a>
 							</div>
                        </li>
-                       
+
                         <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Produtos</a>
 							<div class="dropdown-menu">
@@ -88,6 +88,16 @@
 								<a class="dropdown-item" href="regiao-lista.php">Listar</a>
 							</div>
                        </li>
+
+               <li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Funcionário-Territórios</a>
+                	<div class="dropdown-menu">
+                    	<a class="dropdown-item" href="funcionario-regiao-form.php">Cadastrar</a>
+                    	<a class="dropdown-item" href="funcionario-regiao-lista.php">Listar</a>
+                  </div>
+                </li>
+
+
                     <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Territórios</a>
 							<div class="dropdown-menu">
@@ -105,7 +115,7 @@
           			 </ul>
 
 					</ul>
-					
+
 					<!--Campo de Busca-->
 					<form action="" class="form-inline">
 						<input placeholder="Buscar..." type="search" class="form-control ml-5 mr-1">
@@ -115,15 +125,12 @@
 				</div>
 			</div>
 	</nav>
-    <div class="container">	
+    <div class="container">
 	<div class="mb-5"></div><br>
 
 
 
-    
+
     <div class="container ">
 
         <div class="principal">
-
-
-    

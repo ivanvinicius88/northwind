@@ -67,4 +67,21 @@
             return $regioes;
         }
 
-    }
+
+        /*---------------------------------------------------------------------------------------------------------------------*/
+        function listaFunReg() {
+            $funcionarios = array();
+            $sql = "SELECT * FROM funcionarios_territorios tb
+                              INNER JOIN territorios t ON tb.IDTerritorio = t.IDTerritorio
+                              INNER JOIN funcionarios f ON tb.IDFuncionario = f.IDFuncionario "; //echo $sql;
+
+            $resultado = mysqli_query($this->database->getConexao(),$sql);
+
+            while ($funcionario = mysqli_fetch_assoc($resultado)) {
+                array_push($funcionarios, $funcionario);
+            }
+            //print_r($funcionarios);
+            return $funcionarios;
+        }
+
+      }
