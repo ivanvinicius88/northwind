@@ -10,27 +10,30 @@ include_once("library-operation.php");
 
 ?>
 
-<h1 class="my-4 ">Cadastrar Região</h1>
+	<div class="container">
 
-<form method="get" action="regiao-cadastra.php">
- 
-  <div class="form-row">
-    <div class="form-group my-4 mx-3 col-md-4">
-      <label for="inputEmail4">Região ID</label>
-      <input name="idreg" type="text" class="form-control" id="inputEmail4" placeholder="ID">
-    </div>
-    
-    <div class="form-group my-4 mx-3 col-md-4">
-      <label for="inputPassword4">Descrição da Região</label>
-      <input name="descreg" type="text" class="form-control" id="inputPassword4" placeholder="Sobreome">
-    </div>
-  </div>
-  
-  
-   <button type="submit" class="my-4 mx-3 btn btn-primary">Cadastrar</button>
-   <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
-   
-</form>
+		<h1 class="my-4 ">Cadastrar Região</h1>
+
+		<form method="get" action="regiao-cadastra.php">
+
+		  <div class="form-row">
+			<div class="form-group my-4 mx-3 col-md-1">
+			  <label for="inputEmail4">ID</label>
+			  <input name="idreg" type="text" class="form-control" id="inputEmail4" placeholder="ID">
+			</div>
+
+			<div class="form-group my-4 mx-3 col-md-4">
+			  <label for="inputPassword4">Nome</label>
+			  <input name="descreg" type="text" class="form-control" id="inputPassword4" placeholder="South">
+			</div>
+		  </div>
+
+
+		   <button type="submit" class="my-4 mx-3 btn btn-primary">Cadastrar</button>
+		   <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
+
+		</form>
+	</div>
 
 
 

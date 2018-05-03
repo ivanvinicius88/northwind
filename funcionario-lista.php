@@ -10,30 +10,54 @@ include_once("library-operation.php");
 ?>
 
 
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered ">
         <tr>
             <td>IDFuncionário</td>
             <td>Sobrenome</td>
             <td>Nome</td>
             <td>Título</td>
-            <td>Acões</td>
-            </tr>
+            <td>Título Cortesia</td>
+            <td>Data Nascimento</td>
+            <td>Data Admissão</td>
+            <td>Endereço</td>
+            <td>Cidade</td>
+            <td>Região</td>
+            <td>CEP</td>
+            <td>Pais</td>
+            <td>Telefone</td>
+            <td>Ações</td>
+        </tr>
         <?php
             $funcionarios = $OperationDto->listaFun();
             foreach ($funcionarios as $funcionario) :
         ?>
 
                 <tr>
-                    <td><?=$funcionario["IDFuncionario"]?></td>
-                    <td><?=$funcionario["Sobrenome"]?></td>
-                    <td><?=$funcionario["Nome"]?></td>
-                    <td><?=$funcionario["Titulo"]?></td>
-
+					<td><?=$funcionario["IDFuncionario"]?></td>
+					<td><?=$funcionario["Sobrenome"]?></td>
+					<td><?=$funcionario["Nome"]?></td>
+					<td><?=$funcionario["Titulo"]?></td>
+					<td><?=$funcionario["TituloCortesia"]?></td>
+					<td><?=$funcionario["DataNac"]?></td>
+					<td><?=$funcionario["DataAdmissao"]?></td>
+					<td><?=$funcionario["Endereco"]?></td>
+					<td><?=$funcionario["Cidade"]?></td>
+					<td><?=$funcionario["Regiao"]?></td>
+					<td><?=$funcionario["Cep"]?></td>
+					<td><?=$funcionario["Pais"]?></td>
+					<td><?=$funcionario["TelefoneResidencial"]?></td>
                     <td>
-                        <a class="btn btn-danger" href="funcionario-update-form.php">Update</a>
-                        <a class="btn btn-danger" href="funcionario-delete-form.php">Delete</a>
-
-                    </td>
+						<div class="form-row">
+							<form class="mx-1 my-1" action = "funcionario-update-form.php" method="post">
+								<input type="hidden" name="IDFuncionario"  value="<?=$funcionario['IDFuncionario']?>"/>
+								<button class="btn btn-primary">Update</button>
+							</form>
+							<form class="mx-1" action = "funcionario-delete-confirma.php" method="post">
+								<input type="hidden" name="IDFuncionario" value="<?=$funcionario['IDFuncionario']?>"/>
+								<button class="btn btn-danger">Remover</button>
+							</form>
+						</div>
+                   </td>
                 </tr>
         <?php
             endforeach

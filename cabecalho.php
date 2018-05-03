@@ -60,7 +60,7 @@
 			</div>
 		</div>	
 	</nav>
-    <div class="container">
+    <div class="#">
 	<div class="mb-5"></div><br>
-    <div class="container ">
+    <div class="#">
         <div class="principal">
