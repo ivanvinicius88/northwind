@@ -3,38 +3,44 @@ include_once("cabecalho.php");
 include_once("conexao.php");
 include_once("library-operation.php");
 
-    $conexao = new BancoDeDados ("localhost","root","","northwind");
+    $conexao = new BancoDeDados ("localhost", "root", "", "northwind");
     $OperationDto = new OperationDto($conexao);
 
 
 ?>
 
 	<div class="container">
-		<table class="table table-striped table-bordered ">
-			<tr>
-				<td>ID Territorio</td>
-				<td>Descrição</td>
-				<td>ID Região</td>
-				<td>Acões</td>
-				</tr>
-			<?php
-				$territorios = $OperationDto->listaTer();
-				foreach ($territorios as $territorio) :
-			?>
+    <table class="table table-striped table-bordered">
+        <tr>
+            <td>ID Território</td>
+            <td>Descrição</td>
+            <td>ID Região</td>
+            <td>Ações</td>
+        </tr>
+        <?php
+            $territorios = $OperationDto->listaTer();
+            foreach ($territorios as $territorio) :
+        ?>
 
-					<tr>
-						<td><?=$territorio["IDTerritorio"]?></td>
-						<td><?=$territorio["DescricaoTerritorio"]?></td>
-						<td><?=$territorio["IDRegiao"]?></td>
+            <tr>
+                <td><?=$territorio["IDTerritorio"]?></td>
+                <td><?=$territorio["DescricaoTerritorio"]?></td>
+                <td><?=$territorio["IDRegiao"]?></td>
 
-						<td>
-							<a class="btn btn-primary" href="produto-update-form.php">Update</a>
-							<a class="btn btn-danger" href="produto-delete.php">Delete</a>
+                <td>
+                  <form action = "#" method="post">
+                      <input type="hidden" name="IDTerritorio"  value="<?=$territorio['IDTerritorio']?>"/>
+                      <button class="btn btn-primary my-1 mx-1">Update</button>
+                  </form>
 
-						</td>
-					</tr>
-			<?php
-				endforeach
-			?>
-		</table>
-    </div>
+                  <form action = "#" method="post">
+                      <input type="hidden" name="IDTerritorio" value="<?=$territorio['IDTerritorio']?>"/>
+                      <button class="btn btn-danger my-1 mx-1">Remover</button>
+                  </form>
+                </td>
+              </tr>
+        <?php
+            endforeach
+        ?>
+    </table>
+</div>	

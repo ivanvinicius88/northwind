@@ -194,138 +194,21 @@
 	   
 	   
 	   //---------------Listar Territórios
-	   		function listaTer(){
-				$territorios = array();
-				$sql = "SELECT * FROM territorios t INNER JOIN regiao r ON t.IDRegiao = r.IDRegiao";
-				$resultado = mysqli_query($this->database->getConexao(),$sql);
-				while($territorio = mysqli_fetch_assoc($resultado)){
-					array($territorios, $territorio);
-				}
-				return $territorios;
-			}
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-      }
+	   		public function listaTer() {
+			$territorios = array();
+				
+			$sql = "SELECT * FROM territorios";
+			$resultado = mysqli_query($this->database->getConexao(), $sql);
+				
+			while ($territorio = mysqli_fetch_assoc($resultado)) {
+				array_push($territorios, $territorio);
+			}	
+			return $territorios;
+		}
+	}
+	   
+	
+	   
+	   
+    
+?>
