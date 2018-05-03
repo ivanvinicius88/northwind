@@ -1,0 +1,15 @@
+{
+    "name": "ivan/northwind",
+    "description": "northwind",
+    "type": "project",
+    "require": {
+        "twbs/bootstrap": "^4.1"
+    },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "ivan vinicius boneti",
+            "email": "ivanvincius88@unidavi.edu.br"
+        }
+    ]
+}
