@@ -11,7 +11,7 @@ $sobrenome = $_GET['sobrenome'];
 $nome = $_GET['nome'];
 $titulo = $_GET['titulo'];
 
-$add = $OperationDto->cadFun($id, $sobrenome, $nome, $titulo);
+$add = $OperationDto->cadFun($idfuncionario, $sobrenome, $nome, $titulo, $titulocortesia, $datanascimento, $dataadmissao, $endereco, $cidade, $regiao, $cep, $pais, $telefone, $extensao,$notas);
 if($add){
   ?>
   <script>

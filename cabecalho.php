@@ -38,8 +38,8 @@
                        <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Territórios</a>
 							<div class="dropdown-menu">
-								<a class="dropdown-item" href="">Cadastrar</a>
-								<a class="dropdown-item" href="">Listar</a>
+								<a class="dropdown-item" href="territorio-form.php">Cadastrar</a>
+								<a class="dropdown-item" href="territorio-lista.php">Listar</a>
 							</div>
                        </li>
 					   <li class="nav-item dropdown">

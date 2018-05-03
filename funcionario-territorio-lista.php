@@ -16,7 +16,7 @@ include_once("library-operation.php");
 				<td>Ações</td>
 			  </tr>
 			  <?php
-				  $funcionarios = $OperationDto->listaFunReg();
+				  $funcionarios = $OperationDto->listaFunTer();
 				  foreach ($funcionarios as $funcionario) :
 			  ?>
 
