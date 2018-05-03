@@ -16,7 +16,7 @@ $funcionario = $OperationDto->lookingFun($id);
 <div class="container">
   <h1 class="my-4 ">Atualizar Funcionários</h1>
 
-  <form method="POST" action="funcionario-cadastra.php">
+  <form method="POST" action="funcionario-update.php">
 
     <div class="form-row">
       <div class="form-group my-4 mx-3 col-md-1">

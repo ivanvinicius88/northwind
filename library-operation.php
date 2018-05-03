@@ -33,9 +33,10 @@
 	   
 	   
 	   	//---------------Atualizar Funcionários
-			function UpdtFun($id, $sobrenome, $nome, $titulo){
+			function UpdtFun($id, $sobrenome, $nome, $titulo, $titulocortesia, $nascimento, $admissao, $endereco, $cidade, $regiao, $cep, $pais, $telefone,$extensao,$notas){
 
-			  $sql = "UPDATE funcionarios SET Sobrenome='{$sobrenome}', Nome='{$nome}', Titulo='{$titulo}' WHERE   IDFuncionario={$id} ";
+			  $sql = "UPDATE funcionarios SET Sobrenome='{$sobrenome}', Nome='{$nome}', Titulo='{$titulo}', TituloCortesia='{$titulocortesia}', DataNac='{$nascimento}', DataAdmissao='{$admissao}', Endereco='{$endereco}', Cidade='{$cidade}', Regiao='{$regiao}', Cep='{$cep}', Pais='{$pais}', TelefoneResidencial='{$telefone}', Extensao='{$extensao}', Notas='{$notas}'  WHERE   IDFuncionario={$id} ";
+				
 			  return mysqli_query($this->database->getConexao(), $sql);
 
 			}

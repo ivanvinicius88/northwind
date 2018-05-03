@@ -43,23 +43,3 @@ $OperationDto = new OperationDto($conexao);
    ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

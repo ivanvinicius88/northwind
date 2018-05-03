@@ -4,31 +4,40 @@ include_once("library-operation.php");
 
   $conexao = new BancoDeDados("localhost","root","","northwind");
   $OperationDto = new OperationDto($conexao);
-?>
 
-<?php
-  $id = $_GET['idfuncionario'];
-  $sobrenome = $_GET['sobrenome'];
-  $nome= $_GET['nome'];
-  $titulo = $_GET['titulo'];
+	$id =$_POST['id'];
+	$sobrenome =$_POST['sobrenome'];
+	$nome =$_POST['nome'];
+	$titulo =$_POST['titulo'];
+    $titulocortesia = $_POST['titulocortesia'];
+    $nascimento = $_POST['nascimento'];
+    $admissao = $_POST['admissao'];
+    $endereco = $_POST['endereco'];
+    $cidade = $_POST['cidade'];
+    $regiao = $_POST['regiao'];
+    $cep = $_POST['cep'];
+    $pais = $_POST['pais'];
+    $telefone = $_POST['telefone'];
+    $extensao = $_POST['extensao'];
+    $notas = $_POST['notas'];
 
-  $up = $OperationDto->UpdtFun($id, $sobrenome, $nome, $titulo);
-  if($up){
-    ?>
-   <script>
-        alert("O funcionário foi atualizado com Sucesso!");
-        window.location.href = 'index.php';
-    </script>
+    $add = $OperationDto->UpdtFun($id, $sobrenome, $nome, $titulo, $titulocortesia, $nascimento, $admissao, $endereco, $cidade, $regiao, $cep, $pais, $telefone,$extensao,$notas);
+     if($add) {
+       ?>
+      <script>
+           alert("O Funcionário Foi Atualizado Com Sucesso!");
+           window.location.href = 'index.php';
+       </script>
 
-    <?php
-    } else {
-    ?>
-    <script>
-        alert("O funcionário não foi atualizado com sucesso!");
-        window.location.href = 'funcionario-update-form.php';
-    </script>
+       <?php
+       } else {
+       ?>
+       <script>
+           alert("Erro Ao Atualizar Funcionário, Tente Novamente!");
+           window.location.href = 'funcionario-update-form.php';
+       </script>
 
-    <?php
-    }
+       <?php
+       }
+   ?>
 
-?>
