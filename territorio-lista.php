@@ -28,15 +28,17 @@ include_once("library-operation.php");
                 <td><?=$territorio["IDRegiao"]?></td>
 
                 <td>
+				<div class="form-row">
                   <form action = "#" method="post">
                       <input type="hidden" name="IDTerritorio"  value="<?=$territorio['IDTerritorio']?>"/>
-                      <button class="btn btn-primary my-1 mx-1">Update</button>
+                      <button class="btn btn-primary my-1 mx-1">Atualizar</button>
                   </form>
 
                   <form action = "#" method="post">
                       <input type="hidden" name="IDTerritorio" value="<?=$territorio['IDTerritorio']?>"/>
                       <button class="btn btn-danger my-1 mx-1">Remover</button>
                   </form>
+				</div>
                 </td>
               </tr>
         <?php

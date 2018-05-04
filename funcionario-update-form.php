@@ -19,10 +19,7 @@ $funcionario = $OperationDto->lookingFun($id);
   <form method="POST" action="funcionario-update.php">
 
     <div class="form-row">
-      <div class="form-group my-4 mx-3 col-md-1">
-        <label for="idfuncionario">ID</label>
-        <input value="<?=$funcionario['IDFuncionario']?>" name="id" type="text" class="form-control" id="idfuncionario" placeholder="ID" maxlength="4" >
-      </div>
+        <input value="<?=$funcionario['IDFuncionario']?>" name="id" type="hidden" class="form-control" id="idfuncionario">
       
       <div class="form-group my-4 mx-3 col-md-4">
         <label for="sobrenome">Sobrenome</label>
@@ -114,7 +111,7 @@ $funcionario = $OperationDto->lookingFun($id);
       </div>
     </div>
 
-   <button type="submit" class="my-4 mx-3 btn btn-primary">Cadastrar</button>
+   <button type="submit" class="my-4 mx-3 btn btn-primary">Atualizar</button>
    <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
 
 

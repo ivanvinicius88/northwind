@@ -25,7 +25,7 @@
 		}
 	   
 	   //---------------Buscar Funcionários
-	   public function lookingFun($id){
+	   	   function lookingFun($id){
 		   $sql = "SELECT * FROM funcionarios WHERE IDFuncionario = '{$id}'";
 		   $resultado = mysqli_query($this->database->getConexao(),$sql);
 		   return mysqli_fetch_assoc($resultado);
@@ -57,7 +57,12 @@
 				
 			}
 	   
-	   
+	   //---------------Remover Funcionários
+	   	function remFun($id) {
+			$sql = "DELETE FROM `funcionarios` WHERE `funcionarios`.`IDFuncionario` = {$id}";
+			mysqli_query($this->database->getConexao(), $sql);
+			
+		}
 	   
 	   
 	   

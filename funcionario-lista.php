@@ -50,9 +50,9 @@ include_once("library-operation.php");
 						<div class="form-row">
 							<form class="mx-1 my-1" action = "funcionario-update-form.php" method="post">
 								<input type="hidden" name="IDFuncionario"  value="<?=$funcionario['IDFuncionario']?>"/>
-								<button class="btn btn-primary">Update</button>
+								<button class="btn btn-primary">Atualizar</button>
 							</form>
-							<form class="mx-1" action = "funcionario-delete-confirma.php" method="post">
+							<form class="mx-1 my-1" action = "funcionario-delete-confirma.php" method="post">
 								<input type="hidden" name="IDFuncionario" value="<?=$funcionario['IDFuncionario']?>"/>
 								<button class="btn btn-danger">Remover</button>
 							</form>

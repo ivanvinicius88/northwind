@@ -27,8 +27,8 @@ include_once("library-operation.php");
 
 
 						<td>
-							<a class="btn btn-primary" href="produto-update-form.php">Update</a>
-							<a class="btn btn-danger" href="produto-delete.php">Delete</a>
+							<a class="btn btn-primary" href="produto-update-form.php">Atualizar</a>
+							<a class="btn btn-danger" href="produto-delete.php">Remover</a>
 
 						</td>
 					</tr>
