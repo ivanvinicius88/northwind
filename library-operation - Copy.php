@@ -21,19 +21,15 @@
 		public function cadFun($id, $sobrenome, $nome, $titulo, $titulocortesia, $nascimento, $admissao, $endereco, $cidade, $regiao, $cep, $pais, $telefone, $extensao,$notas){
 
 			$sql = "INSERT INTO funcionarios(IDFuncionario,Sobrenome,Nome,Titulo,TituloCortesia,DataNac,DataAdmissao,Endereco,Cidade,Regiao,Cep,Pais,TelefoneResidencial,Extensao,Notas) VALUES ('$id','$sobrenome','$nome','$titulo','$titulocortesia','$nascimento','$admissao','$endereco','$cidade','$regiao','$cep','$pais','$telefone','$extensao','$notas')";
-			
 			return mysqli_query($this->database->getConexao(),$sql);
 		}
 	   
 	   //---------------Buscar Funcionários
 	   	   function lookingFun($id){
-			   
-			   $sql = "SELECT * FROM funcionarios WHERE IDFuncionario = '{$id}'";
-
-			   $resultado = mysqli_query($this->database->getConexao(),$sql);
-
-			   return mysqli_fetch_assoc($resultado);
-		   }
+		   $sql = "SELECT * FROM funcionarios WHERE IDFuncionario = '{$id}'";
+		   $resultado = mysqli_query($this->database->getConexao(),$sql);
+		   return mysqli_fetch_assoc($resultado);
+	   }
 	   
 	   
 	   	//---------------Atualizar Funcionários
@@ -63,9 +59,7 @@
 	   
 	   //---------------Remover Funcionários
 	   	function remFun($id) {
-			
 			$sql = "DELETE FROM `funcionarios` WHERE `funcionarios`.`IDFuncionario` = {$id}";
-			
 			mysqli_query($this->database->getConexao(), $sql);
 			
 		}
@@ -124,30 +118,14 @@
 
 				return $regioes;
 			}
-	   
-	   	//---------------Buscar Regiões
+	   	//---------------Buscar Funcionários
 	   	   function lookingReg($id){
-			   
-			   $sql = "SELECT * FROM regiao WHERE IDRegiao = '{$id}'";
-			   
-			   $resultado = mysqli_query($this->database->getConexao(),$sql);
-			   
-			   return mysqli_fetch_assoc($resultado);
-			   
-	   		}
+		   $sql = "SELECT * FROM regiao WHERE IDRegiao = '{$id}'";
+		   $resultado = mysqli_query($this->database->getConexao(),$sql);
+		   return mysqli_fetch_assoc($resultado);
+	   }
+
 	   
-	   	//---------------Atualizar Regiões
-	   		function UpdtReg($id, $nome){
-				
-				$sql = "UPDATE regiao SET DescricaoRegiao='{$nome}' WHERE IDRegiao = {$id}";
-				
-				return mysqli_query($this->database->getConexao(), $sql);
-				
-				
-			}
-	   
-		//---------------Remover Regiões
-			
 	   
 	   
 	   

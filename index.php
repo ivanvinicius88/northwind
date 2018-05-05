@@ -1,3 +1,14 @@
-<?php include_once("cabecalho.php"); ?>
-    <h1 class="container my-5">Bem Vindo</h1>
-<?php include_once("rodape.php"); ?>
+<?php 
+	include_once("cabecalho.php"); 
+?>
+   
+  
+    
+    <div class="container my-5 ">
+    <hr>	
+		<img  src="img.jpg"  style=" background-size: cover;  width: auto; height:260px;">	
+    </div>
+    
+<?php 
+	include_once("rodape.php");
+?>

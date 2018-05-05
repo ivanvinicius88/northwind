@@ -24,13 +24,18 @@ include_once("library-operation.php");
 					<tr>
 						<td><?=$regiao["IDRegiao"]?></td>
 						<td><?=$regiao["DescricaoRegiao"]?></td>
-
-
 						<td>
-							<a class="btn btn-primary" href="produto-update-form.php">Atualizar</a>
-							<a class="btn btn-danger" href="produto-delete.php">Remover</a>
-
-						</td>
+						<div class="form-row">
+							<form class="mx-1 my-1" action = "regiao-update-form.php" method="post">
+								<input type="hidden" name="IDRegiao"  value="<?=$regiao['IDRegiao']?>"/>
+								<button class="btn btn-primary">Atualizar</button>
+							</form>
+							<form class="mx-1 my-1" action = "regiao-delete-confirma.php" method="post">
+								<input type="hidden" name="IDRegiao" value="<?=$regiao['IDRegiao']?>"/>
+								<button class="btn btn-danger">Remover</button>
+							</form>
+						</div>
+                   </td>
 					</tr>
 			<?php
 				endforeach
