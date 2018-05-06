@@ -7,13 +7,13 @@
 	$conexao = new BancoDeDados ("localhost", "root", "", "northwind");
 	$OperationDto = new OperationDto($conexao);
 
-
 	$id = $_POST['id'];
 	$nome = $_POST['descricaoregiao'];
 
 	$add = $OperationDto->UpdtReg($id,$nome);
 	if($add){
 		?>
+
 		<script>
 			alert("A Região Foi Atualizada Com Sucesso!");
 			window.location.href = "regiao-lista.php";
@@ -23,6 +23,7 @@
 	}
 	else{
 		?>
+
 		<script>
 			alert("Erro Ao Atualizar A Região, Tente Novamente!");
 			window.location.href = "regiao-lista.php";
@@ -30,5 +31,4 @@
 		
 		<?php
 	}
-
 ?>

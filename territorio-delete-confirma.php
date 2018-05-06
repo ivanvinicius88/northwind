@@ -1,19 +1,15 @@
 <?php 
-include_once("cabecalho.php");
-include_once("conexao.php");
-include_once("library-operation.php");
+	include_once("cabecalho.php"); 
+	include_once("conexao.php");
+	include_once("library-operation.php");
 
+	$conexao = new BancoDeDados('localhost', 'root', '', 'northwind');
+	$OperationDto = new OperationDto($conexao);
 
-
- $conexao = new BancoDeDados('localhost', 'root', '', 'northwind');
- $OperationDto = new OperationDto($conexao);
-
-  $id = $_POST["IDTerritorio"];
-  $territorio = $OperationDto->lookingTer($id);
+	$id = $_POST["IDTerritorio"];
+	$territorio = $OperationDto->lookingTer($id);
 
  ?>
-
-
 
 	<form action="territorio-delete.php" method="post">
       <input type="hidden" name="IDTerritorio" value="<?=$territorio['IDTerritorio']?>">

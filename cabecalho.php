@@ -12,13 +12,10 @@
             $('[data-toggle="popover"]').popover()
         })
 	  </script>
-	
     <title>North Wind</title>
   </head>
 
-
-  <body>
-   			
+  <body>		
   	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark  ">
 		<div class="container">
 			<a href="index.php" class="navbar-brand bg-danger mb-0"><h4>&nbsp;North Wind&nbsp;</h4></a>
@@ -27,7 +24,6 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarsite">
 					<ul class="navbar-nav mr-auto">
-					<!--Menu Items-->
                      	<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Funcionários</a>
 							<div class="dropdown-menu">

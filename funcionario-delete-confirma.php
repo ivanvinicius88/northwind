@@ -3,8 +3,6 @@ include_once("cabecalho.php");
 include_once("conexao.php");
 include_once("library-operation.php");
 
-
-
  $conexao = new BancoDeDados('localhost', 'root', '', 'northwind');
  $OperationDto = new OperationDto($conexao);
 
@@ -12,8 +10,6 @@ include_once("library-operation.php");
   $funcionario = $OperationDto->lookingFun($id);
 
  ?>
-
-
 
 	<form action="funcionario-delete.php" method="post">
       <input type="hidden" name="IDFuncionario" value="<?=$funcionario['IDFuncionario']?>">

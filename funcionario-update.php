@@ -1,9 +1,9 @@
 <?php
-include_once("conexao.php");
-include_once("library-operation.php");
+    include_once("conexao.php");
+    include_once("library-operation.php");
 
-  $conexao = new BancoDeDados("localhost","root","","northwind");
-  $OperationDto = new OperationDto($conexao);
+    $conexao = new BancoDeDados("localhost","root","","northwind");
+    $OperationDto = new OperationDto($conexao);
 
 	$id =$_POST['id'];
 	$sobrenome =$_POST['sobrenome'];
@@ -24,6 +24,7 @@ include_once("library-operation.php");
     $add = $OperationDto->UpdtFun($id, $sobrenome, $nome, $titulo, $titulocortesia, $nascimento, $admissao, $endereco, $cidade, $regiao, $cep, $pais, $telefone,$extensao,$notas);
      if($add) {
        ?>
+
       <script>
            alert("O Funcionário Foi Atualizado Com Sucesso!");
            window.location.href = 'funcionario-lista.php';
@@ -32,6 +33,7 @@ include_once("library-operation.php");
        <?php
        } else {
        ?>
+       
        <script>
            alert("Erro Ao Atualizar Funcionário, Tente Novamente!");
            window.location.href = 'funcionario-lista.php';

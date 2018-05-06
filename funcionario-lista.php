@@ -6,9 +6,7 @@ include_once("library-operation.php");
     $conexao = new BancoDeDados ("localhost","root","","northwind");
     $OperationDto = new OperationDto($conexao);
 
-
 ?>
-
 
     <table class="table table-striped table-bordered ">
         <tr>
@@ -31,7 +29,6 @@ include_once("library-operation.php");
             $funcionarios = $OperationDto->listaFun();
             foreach ($funcionarios as $funcionario) :
         ?>
-
                 <tr>
 					<td><?=$funcionario["IDFuncionario"]?></td>
 					<td><?=$funcionario["Sobrenome"]?></td>

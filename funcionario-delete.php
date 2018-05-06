@@ -7,18 +7,11 @@ include_once("library-operation.php");
 	$OperationDto = new OperationDto($conexao);
 
 	$id = $_POST['IDFuncionario'];
-
 	$OperationDto->remFun($id);
+
     ?>
 
     <script>
            alert("O Funcionário Foi Deletado Com Sucesso");
            window.location.href = 'funcionario-lista.php';
     </script>
-
-
-<?php
-	//header("Location: territorio-lista.php?removido=true");
-	//die();
-
-?>

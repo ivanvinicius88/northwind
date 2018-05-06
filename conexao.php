@@ -1,8 +1,7 @@
 <?php
-    
-    
+
     class BancoDeDados{
-        
+
         private $conn;
 
         public function __construct($host, $user, $pass, $database){
@@ -15,7 +14,6 @@
             
             return $this->conn;
         }
-
 
     }
     

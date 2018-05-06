@@ -1,10 +1,9 @@
 <?php
-include_once("conexao.php");
-include_once("library-operation.php");
+    include_once("conexao.php");
+    include_once("library-operation.php");
 
-$conexao = new BancoDeDados("localhost","root","","northwind");
-$OperationDto = new OperationDto($conexao);
-
+    $conexao = new BancoDeDados("localhost","root","","northwind");
+    $OperationDto = new OperationDto($conexao);
 
 	$id =$_POST['id'];
     $desc = $_POST['nome'];
@@ -13,6 +12,7 @@ $OperationDto = new OperationDto($conexao);
     $add = $OperationDto->cadTer($id, $desc, $reg);
      if($add) {
        ?>
+
       <script>
            alert("O Território Foi Cadastrado Com Sucesso!");
            window.location.href = 'territorio-lista.php';
@@ -21,6 +21,7 @@ $OperationDto = new OperationDto($conexao);
        <?php
        } else {
        ?>
+       
        <script>
            alert("Erro Ao Cadastrar o Território, Tente Novamente!");
            window.location.href = 'territorio-form.php';
