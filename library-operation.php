@@ -224,10 +224,12 @@
 	   // TERRITÓRIOS
 //----------------------------------------------------------
 	   //---------------Cadastrar Territórios
-	   
-	   
-	   
-	   
+	   		function cadTer($id,$desc,$reg){
+
+			$sql = "INSERT INTO territorios(IDTerritorio, DescricaoTerritorio, IDRegiao ) VALUES ('$id','$desc','$reg')";
+			return mysqli_query($this->database->getConexao(),$sql);
+
+			}
 	   
 	   
 	   

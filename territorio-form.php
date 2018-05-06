@@ -14,16 +14,16 @@ $OperationDto = new OperationDto($conexao);
   <form method="POST" action="territorio-cadastra.php">
 
     <div class="form-row">
-      <div class="form-group my-4 mx-3 col-md-1">
+      <div class="form-group my-4 mx-3 col-md-2">
         <label for="idterritorio">ID</label>
-        <input name="id" type="text" class="form-control" id="idterritorio" placeholder="ID" maxlength="4" >
+        <input name="id" type="text" class="form-control" id="idterritorio" placeholder="ID"  >
       </div>
       
       <div class="form-group my-4 mx-3 col-md-4">
         <label for="nome">Nome</label>
         <input name="nome" type="text" class="form-control" id="nome" placeholder="Nome" >
       </div>
-       <div class="form-group mx-3 my-4 col-md-3">
+       <div class="form-group mx-3 my-4 col-md-2">
 		 <label for="regiao">Regiao</label>
 		 <select name="regiao" id="regiao" class="form-control">
 
