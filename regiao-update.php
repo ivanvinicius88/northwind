@@ -16,7 +16,7 @@
 		?>
 		<script>
 			alert("A Região Foi Atualizada Com Sucesso!");
-			window.location.href = "index.php";
+			window.location.href = "regiao-lista.php";
 		</script>
 		
 		<?php
@@ -25,7 +25,7 @@
 		?>
 		<script>
 			alert("Erro Ao Atualizar A Região, Tente Novamente!");
-			window.location.href = "regiao-update-form.php";
+			window.location.href = "regiao-lista.php";
 		</script>
 		
 		<?php

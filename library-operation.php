@@ -246,6 +246,72 @@
 			}	
 			return $territorios;
 		}
+
+
+	   	//---------------Atualizar Regiões
+			function UpdtTer($id, $desc, $reg){
+					
+				$sql = "UPDATE territorios SET DescricaoTerritorio = '{$desc}', IDRegiao='{$reg}' WHERE IDTerritorio = {$id}";
+				
+				return mysqli_query($this->database->getConexao(), $sql);
+				
+				
+			}
+
+
+
+
+
+		//---------------Remover Territórios
+			function remTer($id) {
+				
+				$sql = "DELETE FROM `territorios` WHERE `territorios`.`IDTerritorio` = {$id}";
+				
+				mysqli_query($this->database->getConexao(), $sql);
+				
+			}		
+
+	   
+	   	//---------------Buscar Territórios
+		   function lookingTer($id){
+				
+				$sql = "SELECT * FROM territorios WHERE IDTerritorio = '{$id}'";
+				
+				$resultado = mysqli_query($this->database->getConexao(),$sql);
+				
+				return mysqli_fetch_assoc($resultado);
+				
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 	   
 	

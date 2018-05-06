@@ -27,7 +27,7 @@ $OperationDto = new OperationDto($conexao);
        ?>
       <script>
            alert("O Funcionário Foi Cadastrado Com Sucesso!");
-           window.location.href = 'index.php';
+           window.location.href = 'funcionario-lista.php';
        </script>
 
        <?php

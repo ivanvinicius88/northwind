@@ -19,16 +19,17 @@ $regiao = $OperationDto->lookingReg($id);
     <div class="form-row">
         <input value="<?=$regiao['IDRegiao']?>" name="id" type="hidden" class="form-control" id="IDRegiao">
       
-      
       <div class="form-group mx-3  my-4 col-md-4">
         <label for="nome">Nome</label>
         <input value="<?=$regiao['DescricaoRegiao']?>" name="descricaoregiao" type="text" class="form-control" id="nome" placeholder="Região" >
       </div>
     </div>
+
+
     <div class="form-row">
-		<button type="submit" class="my-4 mx-3 btn btn-primary">Atualizar</button>
-		<button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
-	</div>	
+      <button type="submit" class="my-4 mx-3 btn btn-primary">Atualizar</button>
+      <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
+	  </div>	
 
   </form>
 </div>

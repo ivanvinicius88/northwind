@@ -9,9 +9,16 @@ include_once("library-operation.php");
 	$id = $_POST['IDRegiao'];
 
 	$OperationDto->remReg($id);
+    ?>
+
+    <script>
+           alert("A Região Foi Deletada Com Sucesso");
+           window.location.href = 'regiao-lista.php';
+    </script>
 
 
-	header("Location: regiao-lista.php?removido=true");
-	die();
+<?php
+	//header("Location: territorio-lista.php?removido=true");
+	//die();
 
 ?>

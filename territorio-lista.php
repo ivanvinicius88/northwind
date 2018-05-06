@@ -29,12 +29,12 @@ include_once("library-operation.php");
 
                 <td>
 				<div class="form-row">
-                  <form action = "#" method="post">
+                  <form action = "territorio-update-form.php" method="post">
                       <input type="hidden" name="IDTerritorio"  value="<?=$territorio['IDTerritorio']?>"/>
                       <button class="btn btn-primary my-1 mx-1">Atualizar</button>
                   </form>
 
-                  <form action = "#" method="post">
+                  <form action = "territorio-delete-confirma.php" method="post">
                       <input type="hidden" name="IDTerritorio" value="<?=$territorio['IDTerritorio']?>"/>
                       <button class="btn btn-danger my-1 mx-1">Remover</button>
                   </form>

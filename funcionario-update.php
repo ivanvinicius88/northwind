@@ -26,7 +26,7 @@ include_once("library-operation.php");
        ?>
       <script>
            alert("O Funcionário Foi Atualizado Com Sucesso!");
-           window.location.href = 'index.php';
+           window.location.href = 'funcionario-lista.php';
        </script>
 
        <?php
@@ -34,7 +34,7 @@ include_once("library-operation.php");
        ?>
        <script>
            alert("Erro Ao Atualizar Funcionário, Tente Novamente!");
-           window.location.href = 'funcionario-update-form.php';
+           window.location.href = 'funcionario-lista.php';
        </script>
 
        <?php

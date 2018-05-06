@@ -18,16 +18,16 @@ $descreg = $_GET['descreg'];
   if($adicionar) {
     ?>
    <script>
-        alert("A região foi cadastrada com Sucesso!");
-        window.location.href = 'index.php';
+        alert("A Região Foi Cadastrada com Sucesso!");
+        window.location.href = 'regiao-lista.php';
     </script>
 
     <?php
     } else {
     ?>
     <script>
-        alert("Produto não cadastrado!");
-        window.location.href = 'regioa-form.php';
+        alert("A Região Não Foi cadastrada!");
+        window.location.href = 'regiao-form.php';
     </script>
 
     <?php
