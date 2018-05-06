@@ -147,7 +147,13 @@
 			}
 	   
 		//---------------Remover Regiões
+		function remReg($id) {
 			
+			$sql = "DELETE FROM `regiao` WHERE `regiao`.`IDRegiao` = {$id}";
+			
+			mysqli_query($this->database->getConexao(), $sql);
+			
+		}
 	   
 	   
 	   

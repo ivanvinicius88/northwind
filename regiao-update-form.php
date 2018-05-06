@@ -17,7 +17,7 @@ $regiao = $OperationDto->lookingReg($id);
   <form method="POST" action="regiao-update.php">
 
     <div class="form-row">
-        <input value="<?=$regiao['IDRegiao']?>" name="id" type="hidden" class="form-control" id="idfuncionario">
+        <input value="<?=$regiao['IDRegiao']?>" name="id" type="hidden" class="form-control" id="IDRegiao">
       
       
       <div class="form-group mx-3  my-4 col-md-4">
