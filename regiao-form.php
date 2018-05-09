@@ -9,7 +9,7 @@
 ?>
 
 	<div class="container">
-
+	<hr>
 		<h1 class="my-4 ">Cadastrar Região</h1>
 		<form method="get" action="regiao-cadastra.php">
 		  <div class="form-row">
@@ -27,7 +27,7 @@
 		    <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
 			</div>
 		</form>
-
+		<hr>
 	</div>
 
 

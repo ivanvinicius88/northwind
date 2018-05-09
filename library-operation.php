@@ -137,7 +137,7 @@
 			}
 
 
-	   	//---------------Atualizar Regiões
+	   	//---------------Atualizar Territórios
 			function UpdtTer($id, $desc, $reg){	
 				$sql = "UPDATE territorios SET DescricaoTerritorio = '{$desc}', IDRegiao='{$reg}' WHERE IDTerritorio = {$id}";
 				return mysqli_query($this->database->getConexao(), $sql);	

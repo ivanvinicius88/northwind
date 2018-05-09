@@ -13,7 +13,7 @@
 ?>
 
 <div class="container">
-
+<hr>
   <h1 class="my-4 ">Atualizar Região</h1>
   <form method="POST" action="regiao-update.php">
     <div class="form-row">
@@ -29,6 +29,6 @@
       <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
 	  </div>	
   </form>
-
+  <hr>
 </div>
 

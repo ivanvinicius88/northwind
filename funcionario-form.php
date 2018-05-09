@@ -8,7 +8,7 @@ $OperationDto = new OperationDto($conexao);
 ?>
 
 <div class="container">
-
+<hr>
   <h1 class="my-4 ">Cadastrar Funcionários</h1>
   <form method="POST" action="funcionario-cadastra.php">
     <div class="form-row">
@@ -92,10 +92,11 @@ $OperationDto = new OperationDto($conexao);
         <input name="notas" type="text" class="form-control" id="notas" placeholder="Ex: Gradueted" >
       </div>
     </div>
+  
    <div class="form-row">
     <button type="submit" class="my-4 mx-3 btn btn-primary">Cadastrar</button>
     <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>
    </div>
   </form>
-
+  <hr>
 </div>

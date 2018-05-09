@@ -1,0 +1,37 @@
+
+//Exemplo para excluir registros da tabela território
+Delete From Territorios Ter
+
+Left Join Regiao Reg on Reg.Id_Regiao = Ter.Id_Regiao 
+
+Where 
+
+    Reg.Id_regiao = 'Id escolhido'
+--------------------------------------------------------------------
+
+//Exemplo para excluir registros da tabela regiao
+Delete From Regiao Reg 
+
+Left Join Território Ter On Ter.Id_Regiao = Reg.Id
+
+Where Ter.Id_Regiao= 'Id_escolhido'
+---------------------------------------------------------------------
+
+//Exemplo para excluir da tabela funcionário território
+Delete From Funcionario_Territorio Fun
+
+Left Join Territorio Ter On Ter.Id_Territorio = Fun.Id_Territorio
+
+Where Ter.Id_Território = 'Id_Escolhido'
+----------------------------------------------------------------------
+
+//Exemplo para excluir id_território da tabela funcionario_Território usando mais de um relacionamento
+Delete From Funcionario_Territorio Fun_Ter
+
+Left Join Funcionario Fun On Fun.Id_Funcinonario = Fun_Ter = Id_Funcionario
+Left Join Territorio Ter On Ter.Id_Territorio = Fun_Ter.Id_Territorio
+
+Where 
+    ((Ter.Id_Território = 'Id_Escolhido')
+  And(Fun.Id_Funcionario = 'Id_Escolhido')
+
