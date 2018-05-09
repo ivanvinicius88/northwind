@@ -112,6 +112,12 @@
 				}
 				return $funcionarios;	
 			}
+
+			//---------------inserir Funcionários Territórios
+			function inserirFunTer($idfun, $idter) {
+				$sql = "INSERT INTO funcionarios_territorios(IDFuncionario,IDTerritorio) VALUES('$idfun','$idter')";
+				return mysqli_query($this->conexao,$sql);
+			}
 	   
 
 

@@ -41,6 +41,7 @@
 					   <li class="nav-item dropdown">
 							 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Funcionário-Territórios</a>
 							 <div class="dropdown-menu">
+								<a class="dropdown-item" href="funcionario-territorio-form.php">Cadastrar</a>
 								<a class="dropdown-item" href="funcionario-territorio-lista.php">Listar</a>
 					    	 </div>
 					   </li>                       
